@@ -1,100 +1,362 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Luis David Avendano-Valencia — Associate Professor - Dynamics and Monitoring - SDU Mechanical Engineering</title>
-  <meta name="description" content="Short tagline or description" />
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#9aa7b2;color-scheme:dark}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#081226 0%,var(--bg) 100%);color:#e6eef3;line-height:1.5;-webkit-font-smoothing:antialiased}
-    .container{max-width:980px;margin:48px auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{font-weight:700;font-size:1.15rem}
-    nav a{color:var(--muted);text-decoration:none;margin-left:12px;font-size:0.95rem}
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:36px 0}
-    h1{font-size:2rem;margin:0}
-    p.lead{color:var(--muted);margin:0 0 8px}
-    .cta{display:flex;gap:10px;margin-top:8px}
-    .btn{background:var(--accent);color:#042027;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:22px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
-    footer{margin-top:42px;color:var(--muted);font-size:0.88rem;text-align:center;padding-bottom:40px}
-    @media(min-width:720px){.hero{grid-template-columns:1fr 320px}.hero .intro{padding-right:12px}.profile{display:flex;align-items:center;gap:12px;justify-content:center;flex-direction:column}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Luis David Avendaño-Valencia | Associate Professor | Structural Dynamics & Monitoring</title>
+
+<meta name="description"
+      content="Personal website of Luis David Avendaño-Valencia, Associate Professor at the University of Southern Denmark." />
+
+<style>
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#06b6d4;
+  --muted:#9aa7b2;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:linear-gradient(180deg,#081226 0%,var(--bg) 100%);
+  color:#e6eef3;
+  line-height:1.6;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:2rem;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.brand{
+  font-size:1.2rem;
+  font-weight:700;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:1rem;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem;
+  padding:3rem 0;
+}
+
+@media(min-width:800px){
+  .hero{
+    grid-template-columns:2fr 1fr;
+  }
+}
+
+h1{
+  font-size:2.8rem;
+  margin-bottom:.5rem;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+.cta{
+  display:flex;
+  gap:1rem;
+  margin-top:1.5rem;
+}
+
+.btn{
+  background:var(--accent);
+  color:#021922;
+  text-decoration:none;
+  padding:.8rem 1rem;
+  border-radius:8px;
+  font-weight:600;
+}
+
+.btn.secondary{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.1);
+  color:var(--muted);
+}
+
+.card{
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.05);
+  padding:1rem;
+  border-radius:12px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1rem;
+}
+
+.profile{
+  text-align:center;
+}
+
+.profile img{
+  border-radius:16px;
+  max-width:180px;
+  width:100%;
+}
+
+.profile-links a{
+  display:inline-block;
+  margin:.3rem;
+  color:var(--accent);
+  text-decoration:none;
+}
+
+section{
+  margin-top:3rem;
+}
+
+ul{
+  color:var(--muted);
+}
+
+footer{
+  margin-top:4rem;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+  padding-bottom:2rem;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">Luis David Avendano-Valencia</div>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <section class="hero" aria-labelledby="home-title">
-      <div class="intro">
-        <h1 id="home-title">Hi — I'm Luis David.</h1>
-        <p class="lead">I develop data-driven methods for modeling real world structural dynamics systems. 
-          This is no simple task. Real world systems are subject to many types of environmental and operational uncertainties, 
-          which make their dynamic characteristics change over time. Considering this, my research group focuses on developing 
-          physics-aware data-driven methods that represent implicitly or explicitly these environmental and operational uncertaities. </br>
-          Our research has significance for modeling, monitoring and controlling physical systems. We can for instance assess the vibration 
-          response characteristics of bridge or a wind turbine over years, considering wind, temperature and other effects. After deploying one 
-          of these models, we are able to provide robust diagnostics about the health state of the system (monitoring), or use it as a predictive 
-          model, within a control system.  </br> 
-          Check some of our projects below! </p>
-        <div class="cta">
-          <a class="btn" href="#projects">View projects</a>
-          <a class="btn secondary" href="resume.pdf">Download resume</a>
-        </div>
+<div class="container">
 
-        <div id="projects" style="margin-top:24px">
-          <h3 style="margin:6px 0">Featured projects</h3>
-          <div class="grid">
-            <article class="card">
-              <strong>Project One</strong>
-              <p style="margin:.5rem 0;color:var(--muted)">Short description — link to the repo or live demo.</p>
-              <a href="#" style="color:var(--accent);text-decoration:none;font-weight:600">View →</a>
-            </article>
+<header>
+  <div class="brand">Luis David Avendaño-Valencia</div>
 
-            <article class="card">
-              <strong>Project Two</strong>
-              <p style="margin:.5rem 0;color:var(--muted)">Short description — web app or library.</p>
-              <a href="#" style="color:var(--accent);text-decoration:none;font-weight:600">View →</a>
-            </article>
+  <nav>
+    #aboutAbout</a>
+    #researchResearch</a>
+    #projectsProjects</a>
+    #contactContact</a>
+  </nav>
+</header>
 
-            <article class="card">
-              <strong>Project Three</strong>
-              <p style="margin:.5rem 0;color:var(--muted)">Short description — what problem it solves.</p>
-              <a href="#" style="color:var(--accent);text-decoration:none;font-weight:600">View →</a>
-            </article>
-          </div>
-        </div>
-      </div>
+<section class="hero">
 
-      <aside class="profile" aria-hidden="true">
-        <img src="https://avatars.githubusercontent.com/ldavendanov" alt="" width="160" height="160" style="border-radius:14px;border:1px solid rgba(255,255,255,0.04)" />
-        <div style="text-align:center;color:var(--muted);font-size:.95rem">Structural Dynamics • Non-Stationary System Identification • Structural Health Monitoring <a href="https://github.com/ldavendanov" style="color:var(--accent)">GitHub</a></div>
-      </aside>
-    </section>
+<div>
 
-    <section id="about">
-      <h3>About</h3>
-      <p style="color:var(--muted)">Welcome! I am Luis David Avendaño-Valencia, an Associate Professor passionate about understanding how complex engineering systems behave, adapt, and evolve over time. My work combines structural dynamics, data-driven modeling, signal processing, and machine learning to extract meaningful insights from real-world observations. Here you can explore my research, publications, teaching, and the projects I am fortunate to develop with students and collaborators around the world.</p>
-    </section>
+<h1>Hi, I'm Luis David.</h1>
 
-    <section id="contact" style="margin-top:18px">
-      <h3>Contact</h3>
-      <p style="color:var(--muted)">Email: <a href="mailto:you@example.com" style="color:var(--accent)">you@example.com</a> • <a href="https://linkedin.com/in/yourprofile" style="color:var(--accent)">LinkedIn</a></p>
-    </section>
+<p class="lead">
+I am an Associate Professor at the University of Southern Denmark working on
+structural dynamics, system identification, and structural health monitoring.
+My research combines physical modeling, statistical inference, signal
+processing, and machine learning to understand complex engineering systems
+from real-world data.
+</p>
 
-    <footer>
-      © Your Name — Built with ❤️ & GitHub Pages
-    </footer>
-  </div>
+<p class="lead">
+From offshore wind turbines and maritime systems to industrial machinery and
+civil structures, I develop methods that help monitor, diagnose, and predict
+system behavior under changing environmental and operational conditions.
+</p>
+
+<div class="cta">
+  #projectsResearch Projects</a>
+  CV_Luis_David_Avendano_Valencia.pdf
+    Download CV
+  </a>
+</div>
+
+</div>
+
+<aside class="profile">
+
+<img src="https://avatars.githubusercontent.com/ldavendanov"
+     alt="Luis David Avendaño-Valencia">
+
+<h3>Associate Professor</h3>
+
+<p style="color:var(--muted)">
+University of Southern Denmark
+</p>
+
+<p style="color:var(--muted)">
+Structural Dynamics<br>
+System Identification<br>
+Structural Health Monitoring
+</p>
+
+<div class="profile-links">
+  <a href="https://github.com/ldavendanov">GitHub</a>
+  #Google Scholar</a>
+  #ORCID</a>
+  #LinkedIn</a>
+</div>
+
+</aside>
+
+</section>
+
+<section id="about">
+
+<h2>About</h2>
+
+<p class="lead">
+Welcome! I am Luis David Avendaño-Valencia, an Associate Professor passionate
+about understanding how complex engineering systems behave, adapt, and evolve
+over time. My work combines structural dynamics, data-driven modeling, signal
+processing, and machine learning to extract meaningful insights from real-world
+observations. Here you can explore my research, publications, teaching, and
+the projects I am fortunate to develop with students and collaborators around
+the world.
+</p>
+
+</section>
+
+<section id="research">
+
+<h2>Research Interests</h2>
+
+<ul>
+  <li>Structural Dynamics</li>
+  <li>Structural Health Monitoring</li>
+  <li>System Identification</li>
+  <li>Non-Stationary Dynamic Systems</li>
+  <li>Statistical Signal Processing</li>
+  <li>Machine Learning for Engineering Systems</li>
+  <li>Digital Twins</li>
+  <li>Uncertainty Quantification</li>
+</ul>
+
+</section>
+
+<section id="projects">
+
+<h2>Research Themes</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Structural Health Monitoring</h3>
+<p>
+Monitoring and diagnostics of civil and mechanical structures using
+operational vibration measurements and long-term monitoring data.
+</p>
+</div>
+
+<div class="card">
+<h3>Offshore Wind Turbines</h3>
+<p>
+Studying environmental and operational effects on structural dynamics
+to improve reliability and asset management.
+</p>
+</div>
+
+<div class="card">
+<h3>System Identification</h3>
+<p>
+Development of physics-informed and data-driven methods for dynamic
+systems with time-varying characteristics.
+</p>
+</div>
+
+<div class="card">
+<h3>Digital Twins</h3>
+<p>
+Hybrid modeling and predictive monitoring solutions for industrial
+equipment and engineering infrastructure.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Highlights</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>20+</h3>
+<p>MSc and BSc projects supervised</p>
+</div>
+
+<div class="card">
+<h3>10+</h3>
+<p>PhD projects supervised or co-supervised</p>
+</div>
+
+<div class="card">
+<h3>ETH Zürich</h3>
+<p>Postdoctoral Fellow</p>
+</div>
+
+<div class="card">
+<h3>Industry Collaboration</h3>
+<p>Wind energy, maritime systems and industrial monitoring</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>
+📧
+ldav@sdu.dk
+ldav@sdu.dk
+</a>
+</p>
+
+<p>
+<a href="https://github.com/ldavendanov" style="color:var(--accent)">GitHub</a>
+&nbsp;|&nbsp;
+#Google Scholar</a>
+&nbsp;|&nbsp;
+#ORCID</a>
+&nbsp;|&nbsp;
+#LinkedIn</a>
+</p>
+
+</section>
+
+<footer>
+
+© 2026 Luis David Avendaño-Valencia<br>
+Institute of Mechanical and Electrical Engineering<br>
+University of Southern Denmark
+
+</footer>
+
+</div>
+
 </body>
 </html>
